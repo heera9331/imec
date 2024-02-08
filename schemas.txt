@@ -1,0 +1,8 @@
+--company table
+create table (id, name , addedon, contact, email, representative, description)
+
+--jobs table
+create table (id, c_id, title, description, skills, start, end, status, addedby, addedon)
+
+--interested_student # status denote - short listed status - 0-interested, 1-shortlisted,2-rejected
+create table (id, v_id, s_id, addedon, status)

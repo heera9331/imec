@@ -1,0 +1,15 @@
+
+
+- 23-01-2024 student login ✔️
+- 24-01-2024 student update ✔️
+- 25-01-2024 student register ✔️
+- 26-01-2024 display events ✔️
+- 26-01-2024 implement event searching ✔️
+- 26-01-2024 pagination ✔️
+- 27-01-2024 implement job searching ✔️
+- 27-01-2024 job pagination searching ✔️
+- 27-01-2024 implement search event and view ✔️
+
+29-01-2024 
+
+

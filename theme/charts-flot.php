@@ -1,0 +1,173 @@
+<?php include 'layouts/header.php'; ?>
+
+<?php include 'layouts/headerStyle.php'; ?>
+
+    <body>
+
+        <?php include 'layouts/loader.php'; ?>
+
+        <?php include 'layouts/navbar.php'; ?>
+
+        <div class="wrapper">
+            <div class="container-fluid">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="btn-group pull-right">
+                                <ol class="breadcrumb hide-phone p-0 m-0">
+                                    <li class="breadcrumb-item"><a href="#">Charts</a></li>
+                                    <li class="breadcrumb-item active">Flot Chart</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Flot Chart</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title end breadcrumb -->
+
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card m-b-20">
+                            <div class="card-body">
+
+                                <h4 class="mt-0 header-title">Multiple Statistics</h4>
+
+                                <ul class="list-inline widget-chart m-t-20 m-b-15 text-center">
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0">362411</h5>
+                                        <p class="text-muted font-14">Activated</p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0">8489</h5>
+                                        <p class="text-muted font-14">Pending</p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0">985412</h5>
+                                        <p class="text-muted font-14">Deactivated</p>
+                                    </li>
+                                </ul>
+
+                                <div id="website-stats" style="height: 320px" class="flot-chart"></div>
+
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+
+                    <div class="col-lg-6">
+                        <div class="card m-b-20">
+                            <div class="card-body">
+
+                                <h4 class="mt-0 header-title">Realtime Statistics</h4>
+
+                                <ul class="list-inline widget-chart m-t-20 m-b-15 text-center">
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0">365214</h5>
+                                        <p class="text-muted font-14">Activated</p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0">6521</h5>
+                                        <p class="text-muted font-14">Pending</p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0">44587</h5>
+                                        <p class="text-muted font-14">Deactivated</p>
+                                    </li>
+                                </ul>
+
+                                <div id="flotRealTime" style="height: 320px" class="flot-chart"></div>
+
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card m-b-20">
+                            <div class="card-body">
+
+                                <h4 class="mt-0 header-title">Donut Pie</h4>
+
+                                <ul class="list-inline widget-chart m-t-20 m-b-15 text-center">
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0">5484</h5>
+                                        <p class="text-muted font-14">Activated</p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0">964984</h5>
+                                        <p class="text-muted font-14">Pending</p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0">98498</h5>
+                                        <p class="text-muted font-14">Deactivated</p>
+                                    </li>
+                                </ul>
+
+                                <div id="donut-chart">
+                                    <div id="donut-chart-container" class="flot-chart" style="height: 320px">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+
+                    <div class="col-lg-6">
+                        <div class="card m-b-20">
+                            <div class="card-body">
+
+                                <h4 class="mt-0 header-title">Pie Chart</h4>
+
+                                <ul class="list-inline widget-chart m-t-20 m-b-15 text-center">
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0">86541</h5>
+                                        <p class="text-muted font-14">Activated</p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0">2541</h5>
+                                        <p class="text-muted font-14">Pending</p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0">102030</h5>
+                                        <p class="text-muted font-14">Deactivated</p>
+                                    </li>
+                                </ul>
+
+                                <div  id="pie-chart">
+                                    <div id="pie-chart-container" class="flot-chart" style="height: 320px">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+
+            </div> <!-- end container -->
+        </div>
+        <!-- end wrapper -->
+
+        <?php include 'layouts/footer.php'; ?>
+
+        <?php include 'layouts/footerScript.php'; ?>
+
+        <script src="public/assets/plugins/flot-chart/jquery.flot.min.js"></script>
+        <script src="public/assets/plugins/flot-chart/jquery.flot.time.js"></script>
+        <script src="public/assets/plugins/flot-chart/jquery.flot.tooltip.min.js"></script>
+        <script src="public/assets/plugins/flot-chart/jquery.flot.resize.js"></script>
+        <script src="public/assets/plugins/flot-chart/jquery.flot.pie.js"></script>
+        <script src="public/assets/plugins/flot-chart/jquery.flot.selection.js"></script>
+        <script src="public/assets/plugins/flot-chart/jquery.flot.stack.js"></script>
+        <script src="public/assets/plugins/flot-chart/curvedLines.js"></script>
+        <script src="public/assets/plugins/flot-chart/jquery.flot.crosshair.js"></script>
+        <script src="public/assets/pages/flot.init.js"></script>
+
+        <!-- App js -->
+        <script src="public/assets/js/app.js"></script>
+
+    </body>
+</html>
