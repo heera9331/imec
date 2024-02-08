@@ -95,7 +95,7 @@ include("functions.php");
             </div> 
                 <!-- event are listed here -->
                 <div>
-                    <h5>Upcoming events</h3>
+                    <h3>Upcoming events</h3>
                 </div>  
                 <div class="container d-flex flex-wrap justify-content-start w-100">
                     <?php 
@@ -132,7 +132,7 @@ include("functions.php");
                 </div>
                 <!-- event are listed here -->
                 <div>
-                    <h5>Jobs</h3>
+                    <h3>Jobs</h3>
                 </div> 
 
                 <div class="container d-flex flex-wrap justify-content-start w-100">
@@ -182,9 +182,6 @@ include("functions.php");
         </div>
 
 
-        </div> <!-- end container -->
-    </div>
-    <!-- end wrapper -->
 
 
     <!-- Footer -->
