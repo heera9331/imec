@@ -9,7 +9,11 @@
 - 27-01-2024 implement job searching ✔️
 - 27-01-2024 job pagination searching ✔️
 - 27-01-2024 implement search event and view ✔️
-- 08-02-2024 working on updates page
+- 08-02-2024 working on updates page ✔️
+- 09-02-2024 working on updates page done ✔️
+- 11-02-2024 working on job profile partially done ✔️
+- 11-02-2024 working on job profile completed done ✔️
+- 11-02-2024 print inserted details
 
 
 

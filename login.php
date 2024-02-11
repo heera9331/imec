@@ -58,7 +58,7 @@ include("functions.php");
 							$count = count($result);
 							if($count == 0)
 							{
-								echo "<h3>Something is not right here</h3>";		
+								echo "<h5>Something is not right here</h5>";
 							}
 							else if($count == 1)
 							{

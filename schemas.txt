@@ -6,3 +6,35 @@ create table (id, c_id, title, description, skills, start, end, status, addedby,
 
 --interested_student # status denote - short listed status - 0-interested, 1-shortlisted,2-rejected
 create table (id, v_id, s_id, addedon, status)
+
+
+
+CREATE TABLE student_academics ( 
+  ID INT PRIMARY KEY AUTO_INCREMENT, 
+  StudentId int COMMENT 'REFERENCES TO STUDENTS TABLE ID', 
+  FirstName varchar(64), 
+  LastName varchar(64), 
+  Email varchar(64), P
+  hone varchar(10), 
+  Address varchar(64), 
+  Addedon DATE DEFAULT CURRENT_TIMESTAMP 
+); 
+
+CREATE TABLE education ( 
+  ID INT PRIMARY KEY AUTO_INCREMENT, 
+  studentid INT COMMENT 'REFERENCES TO STUDENTS TABLE ID',
+  degree VARCHAR(100), major VARCHAR(100), 
+  institution VARCHAR(100), 
+  marks float(2,2), 
+  startdate DATE, 
+  enddate DATE, 
+  addedon DATE DEFAULT CURRENT_TIMESTAMP 
+);
+
+CREATE TABLE skills ( 
+  id INT PRIMARY KEY AUTO_INCREMENT, 
+  studentid INT COMMENT 'references to students table\'s id', 
+  skill VARCHAR(100), 
+lavel int, addedon date DEFAULT CURRENT_TIMESTAMP );
+
+CREATE TABLE work_experience ( id int PRIMARY KEY AUTO_INCREMENT, studentid int COMMENT 'refereces to student table\'s id', company varchar(64), position varchar(64), years float(2,1) , startdate date, enddate date, addedon date DEFAULT CURRENT_TIMESTAMP );
