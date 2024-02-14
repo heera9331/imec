@@ -102,6 +102,13 @@
                         <a href="resume.php"><i class="mdi mdi-view-dashboard"></i>Resume</a>
                     </li>
 
+                    <li class="has-submenu">
+                        <a href="./update-profile.php"><i class="mdi mdi-view-dashboard"></i>Update Profile</a>
+                    </li>
+                    <li class="menu">
+                        <a href="./update-result.php"><i class="mdi mdi-view-dashboard"></i>Result</a>
+                    </li>
+
 
                     <li>
                         <a href="logout.php"><i class="mdi mdi-logout"></i>Logout</a>

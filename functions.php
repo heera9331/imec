@@ -376,4 +376,21 @@ function containsInterest($query) : bool {
 	return false;
 }
 
+function hasResult($studentid, $semester) {
+    // Assuming $db is your database connection object
+    $sql = "SELECT COUNT(*) AS cnt FROM student_academics WHERE studentid = ? AND semester = ?";
+    global $conn;
+	$stmt = $conn->prepare($sql);
+    $stmt->bind_param("ii", $studentid, $semester);
+    $stmt->execute();
+    $stmt->bind_result($count);
+    $stmt->fetch();
+    $stmt->close();
+
+    if ($count == 0) {
+        return false;
+    }
+    return true;
+}
+
 ?>

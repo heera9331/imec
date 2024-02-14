@@ -2,7 +2,7 @@
 <?php 
     // courses with number of semesters
     // all branches have same semesters
-    const $courses = [
+    $courses = [
         ["BTECH", 8],
         ["ITI", 4],
         ["DIPLOMA", 6],

@@ -98,6 +98,17 @@ include("functions.php");
                 echo '<p>Intitution - '.$res['institution']  .'</p>';
                 echo '<p>Date - '.$res['startdate'].' to '.$res['enddate']  .'</p>'; 
                 echo '<p>Intitution - '.$res['marks']  .'</p>';
+                
+                // view id and url id is same than we show the delete button
+
+                $userid = $_SESSION['userid'];
+                $previewId = $_GET['id'];
+                if($userid == $previewId) {
+                  // echo '<form action="resume-preivew.php?id='.$_SESSION['userid'].' method="post">';
+                  //     echo '<input type="hidden" name="$educationid"'.$res["ID"].'/>';
+                  //     echo '<button class="btn cursor-pointer bg-danger" type="submit" >remove</button>';
+                  // echo '</form>';
+                }
                 echo '</div>';
             }
             ?>

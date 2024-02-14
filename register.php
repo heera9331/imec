@@ -1,5 +1,6 @@
 <?php
 include("functions.php");
+include("constants.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -90,6 +91,13 @@ include("functions.php");
                             <div class="form-group">
                                 <label for="password">Password</label>
                                 <input type="password" class="form-control" name="password" id="password" value = "" placeholder="Enter password" required />
+                            </div>
+
+                            <div class="form-group d-flex align-items-center ">
+                                <label for="branch" class="pr-2">Course</label>
+                                <select name="branch" id="branch">
+                                    <option value="Other">Other</option>
+                                </select>
                             </div>
 
                             <div class="form-group">
