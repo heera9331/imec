@@ -8,4 +8,9 @@
         ["DIPLOMA", 6],
         ["MBA", 4],
     ];
+
+    // mapping courses with branch
+    // mapping data structure
+
+    const result = ["passed", "atkt"];
 ?>

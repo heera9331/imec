@@ -99,7 +99,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="job-profile.php"><i class="mdi mdi-view-dashboard"></i>Job Profile</a>
+                        <a href="resume.php"><i class="mdi mdi-view-dashboard"></i>Resume</a>
                     </li>
 
 

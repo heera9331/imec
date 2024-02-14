@@ -57,12 +57,12 @@ include("site-header.php");
                         <div class="content clearfix">
                             <h4 id="form-horizontal-h-0" tabindex="-1" class="title current">Student Details
                         <div class="d-inline-block p-2">
-                            <a class="link active cursor-pointer" href="./job-profile-preview.php?id=<?php echo $_SESSION['userid'];?>
+                            <a class="link active cursor-pointer" href="./resume-preview.php?id=<?php echo $_SESSION['userid'];?>
                             "><i class="fa fa-eye"></i></a>
                         </div>
                             </h4>
                             <!-- personal information section -->
-                            <form method="post" action="./job-profile.php">
+                            <form method="post" action="./resume.php">
                                 <fieldset id="form-horizontal-p-0" aria-labelledby="form-horizontal-h-0"
                                           class="body current" aria-hidden="false">
                                     <h6>Personal Information</h6>
@@ -164,7 +164,7 @@ include("site-header.php");
                               ?>
                             </form>
                             <!-- education section -->
-                            <form action="./job-profile.php" method="post">
+                            <form action="./resume.php" method="post">
                                 <fieldset id="education" aria-labelledby="form-horizontal-h-0"
                                         class="body current" aria-hidden="false">
                                     <h6>Education Details</h6>
@@ -254,7 +254,7 @@ include("site-header.php");
                                 </fieldset>
                             </form>
                             <!-- skills section -->
-                            <form action="./job-profile.php" method="post">
+                            <form action="./resume.php" method="post">
                                 <fieldset id="skills" aria-labelledby="form-horizontal-h-0"
                                         class="body current" aria-hidden="false">
                                     <h6>Skills</h6>
@@ -295,7 +295,7 @@ include("site-header.php");
                             </form>
                             
                             <!-- experience section -->
-                            <form action="./job-profile.php" method="post">
+                            <form action="./resume.php" method="post">
                                 <fieldset id="work-experience" aria-labelledby="form-horizontal-h-0"
                                         class="body current" aria-hidden="false">
                                     <h6>Work Experience</h6>
