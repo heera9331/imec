@@ -113,7 +113,7 @@ $offset = ($page - 1) * $pageSize;
                 // sno, title, status, date, view
                 $userid = $_SESSION['userid'];
                 $query = "
-            SELECT EVENTS.ID, EVENTS.event_title, events.event_from,student_interests.status  
+            SELECT events.ID, events.event_title, events.event_from,student_interests.status  
             FROM student_interests 
             JOIN events ON events.id = t_id
             WHERE TYPE=0 AND s_id=$userid LIMIT 20;";
@@ -173,7 +173,7 @@ $offset = ($page - 1) * $pageSize;
                 // sno, title, status, date, view
                 $userid = $_SESSION['userid'];
                 $query = "
-                SELECT EVENTS.ID, EVENTS.event_title, events.event_from,student_interests.status  
+                SELECT events.ID, events.event_title, events.event_from,student_interests.status  
                 FROM student_interests 
                 JOIN events ON events.id = t_id
                 WHERE TYPE=1 AND s_id=$userid LIMIT 20;";
