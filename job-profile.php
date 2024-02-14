@@ -135,18 +135,18 @@ include("site-header.php");
                                 $studentid = $_SESSION['userid'];
                                 // check if user fill details already
                                 // if already then we update else insert
-                                $query = "SELECT count(*) as count FROM student_academics WHERE studentid = $studentid";
+                                $query = "SELECT count(*) as count FROM student_info WHERE studentid = $studentid";
                                 echo $res = dbqueryresult($query)[0]['count'];
 
                                 // count 0 mean not present
 
                                   if($res == "0") {
-                                    echo $query = "INSERT INTO student_academics 
+                                    $query = "INSERT INTO student_info 
                             (studentid, firstname, lastname,email, phone, address) 
                     values ($studentid,'$firstName', '$lastName', '$email', '$phone', '$address');";
                                     dbquery($query);
                                   } else {
-                                    $query = "UPDATE student_academics
+                                    $query = "UPDATE student_info
                                     set
                                     firstname='$firstName',
                                     lastname='$lastName',
@@ -284,7 +284,7 @@ include("site-header.php");
                                         $level = $_POST['level'];
                                         $studentid = $_SESSION['userid'];
 
-                                        $query = "INSERT INTO `skills` (`studentid`, `skill`, `lavel`) VALUES ($studentid,'$skill',$level);";
+                                        $query = "INSERT INTO `skills` (`studentid`, `skill`, `level`) VALUES ($studentid,'$skill',$level);";
                                         dbquery($query);
                                     
                                         echo '<script type="text/javascript">
@@ -346,8 +346,7 @@ include("site-header.php");
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="description" class="col-lg-3 col-form-label">Description
-                                                    1</label>
+                                                <label for="description" class="col-lg-3 col-form-label">Description</label>
                                                 <div class="col-lg-9">
                                                     <textarea id="description" name="description" rows="4"
                                                             class="form-control"
@@ -375,7 +374,7 @@ include("site-header.php");
                                             $years = $_POST['years'];
                                             $studentid = $_SESSION['userid'];
 
-                                            $query = "INSERT INTO `work_experience`(`studentid`, `company`, `position`, `years`, `startdate`, `enddate`) VALUES ($studentid,'$company','$position',$years,'$workstartdate','$workenddate');";
+                                            $query = "INSERT INTO `work_experience`(`studentid`, `company`, `position`, `description`, `years`, `startdate`, `enddate`) VALUES ($studentid,'$company','$position', '$description',$years,'$workstartdate','$workenddate');";
                                             dbquery($query);
                                         
                                             echo '<script type="text/javascript">

@@ -13,7 +13,10 @@
 - 09-02-2024 working on updates page done ✔️
 - 11-02-2024 working on job profile partially done ✔️
 - 11-02-2024 working on job profile completed done ✔️
-- 11-02-2024 print inserted details
+- 12-02-2024 print inserted details
+- 12-02-2024 job profile
+- 13-02-2024 job profile preview partially
+
 
 
 
