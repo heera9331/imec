@@ -50,3 +50,13 @@ CREATE TABLE work_experience (
   enddate date, 
   addedon date DEFAULT CURRENT_TIMESTAMP 
 );
+
+CREATE TABLE student_academics(
+id int PRIMARY KEY AUTO_INCREMENT,
+    studentid int,
+    semester int,
+    marks int,
+	result varchar(10),
+    remark varchar(32),
+    addedon date DEFAULT CURRENT_TIMESTAMP
+); 
