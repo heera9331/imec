@@ -17,6 +17,7 @@
 - 12-02-2024 job profile ✔️
 - 13-02-2024 job profile preview partially ✔️
 - 14-02-2024 update result ✔️
+- 22-02-2024 add delete button on resume preview page ✔️
 
 
 
