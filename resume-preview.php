@@ -1,4 +1,5 @@
 <?php
+global $siteName;
 include("protect.php");
 include("functions.php");
 ?>
@@ -35,8 +36,6 @@ include("functions.php");
     <script src="assets/js/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript"
         charset="utf-8"></script>
-
-     
 
 </head>
 <body>
@@ -88,26 +87,43 @@ include("functions.php");
             $studentid = $_SESSION['userid'];
             $query = "SELECT * FROM education WHERE studentid=$studentid";
             $result = dbqueryresult($query);
-              
+             
             echo '<h4>Education</h4>';
             foreach ($result as $res) {
-                
                 echo '<div class="border p-3 my-2" style="1px solid black;">';
                 echo '<p>Degree - '.$res['degree'].'</p>';
                 echo '<p>Major - '.$res['major']  .'</p>';
                 echo '<p>Intitution - '.$res['institution']  .'</p>';
-                echo '<p>Date - '.$res['startdate'].' to '.$res['enddate']  .'</p>'; 
+                echo '<p>Date - '.$res['startdate'].' to '.$res['enddate']  .'</p>';
                 echo '<p>Intitution - '.$res['marks']  .'</p>';
                 
                 // view id and url id is same than we show the delete button
 
                 $userid = $_SESSION['userid'];
-                $previewId = $_GET['id'];
+                $previewId = -1;
+
+                if(isset($_GET['id'])) {
+                    $previewId  = $_GET['id'];
+                }
+                // remove button is not visible to anyone except owner of the education
                 if($userid == $previewId) {
-                  // echo '<form action="resume-preivew.php?id='.$_SESSION['userid'].' method="post">';
-                  //     echo '<input type="hidden" name="$educationid"'.$res["ID"].'/>';
-                  //     echo '<button class="btn cursor-pointer bg-danger" type="submit" >remove</button>';
-                  // echo '</form>';
+                  echo '<form method="post" action="resume-preview.php">';
+                  echo '<input type="hidden" name="id" value="'.$res['ID'].'"/>';
+                  echo '<input type="hidden" name="studentid" value="'.$res['studentid'].'"/>';
+                  echo '<button class="btn btn-danger" name="remove_edu" type="submit">';
+                  echo 'Remove';
+                  echo '</button>';
+                  echo '</form>';
+                }
+
+                if(isset($_POST['remove_edu'])) {
+                    $eduid = $_POST['id'];
+                    $studentid = $_POST['studentid'];
+                    $sql = "DELETE FROM `education` WHERE id=$eduid AND studentid=$studentid;";
+                    dbquery($sql);
+                    echo '<script type="text/javascript">
+                        alert("removed");
+                    </script>';
                 }
                 echo '</div>';
             }
@@ -117,7 +133,7 @@ include("functions.php");
             <?php
             $studentid = $_SESSION['userid'];
             $query = "SELECT * FROM skills WHERE studentid=$studentid;";
-            $res = dbqueryresult($query); 
+            $res = dbqueryresult($query);
             
             echo '<h4>Skills</h4>';
             // print_r($res);
