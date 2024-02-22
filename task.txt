@@ -14,9 +14,9 @@
 - 11-02-2024 working on job profile partially done ✔️
 - 11-02-2024 working on job profile completed done ✔️
 - 12-02-2024 print inserted details
-- 12-02-2024 job profile
-- 13-02-2024 job profile preview partially
-- 14-02-2024 update result
+- 12-02-2024 job profile ✔️
+- 13-02-2024 job profile preview partially ✔️
+- 14-02-2024 update result ✔️
 
 
 
